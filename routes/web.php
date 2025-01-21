@@ -13,8 +13,8 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])
     })->name('dashboard');
 
     Route::controller(CompanyController::class)->group(function () {
-        Route::get('/company/index', 'index')->name('company.index');
-        Route::post('/company/store', 'store')->name('company.store');
-        Route::post('/company/update', 'update')->name('company.update');
+        Route::get('/admin/company/index', 'index')->name('admin.company.index');
+        Route::post('/admin/company/store', 'store')->name('admin.company.store');
+        Route::post('/admin/company/update', 'update')->name('admin.company.update');
     });
 });

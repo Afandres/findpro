@@ -36,65 +36,41 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                 data-accordion="false">
-                <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-                    <li class="nav-item menu-open">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-user-circle"></i>
-                            <p>
-                                Talento Humano
-                                <i class="right fas fa-angle-left"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Personas</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" class="nav-link ">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Reporte</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item menu-open">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-cogs"></i>
-                            <p>
-                                Gestion Productos
-                                <i class="right fas fa-angle-left"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="" class="nav-link ">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Categorias</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" class="nav-link ">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Productos</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link ">
-                            <i class="nav-icon fas fa-th"></i>
-                            <p>
-                                Gestion Zonas
-                            </p>
-                        </a>
-                    </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.company.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-store"></i>
+                        <p>
+                            Compañia
+                        </p>
+                    </a>
+                </li>
                 <li class="nav-item">
                     <a href="" class="nav-link">
-                        <i class="nav-icon fas fa-cart-flatbed"></i>
+                        <i class="nav-icon fas fa-landmark-flag"></i>
+                        <p>
+                            Sector
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <i class="nav-icon fas fa-tags"></i>
+                        <p>
+                            Categoria
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <i class="nav-icon fas fa-bag-shopping"></i>
+                        <p>
+                            Producto
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <i class="nav-icon fas fa-truck-ramp-box"></i>
                         <p>
                             Inventario
                         </p>
