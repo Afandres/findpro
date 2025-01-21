@@ -26,7 +26,12 @@
                         <td>{{ $company->email }}</td>
                         <td>{{ $company->in_charge }}</td>
                         <td><button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#update_{{ $company->id }}">Editar</button>
-                            <button class="btn btn-danger">Eliminar</button>
+                            <a href="#" class="btn btn-danger" onclick="confirmDelete(event, '{{ route('admin.company.destroy', $company->id) }}')">Eliminar</a>
+                            <!-- Botón o enlace de eliminación -->
+                            <form id="delete-form" action="{{ route('admin.company.destroy', $company->id) }}" method="POST" style="display: none;">
+                                @csrf
+                                @method('DELETE')
+                            </form>
                         </td>
                     </tr>
                     <!-- Modal -->

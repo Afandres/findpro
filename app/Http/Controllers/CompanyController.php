@@ -29,7 +29,7 @@ class CompanyController extends Controller
         $company->in_charge = $in_charge;
         $company->save();
         
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Empresa registrada exitosamente');
     }
 
     public function update(Request $request)
@@ -49,6 +49,16 @@ class CompanyController extends Controller
         $company->in_charge = $in_charge;
         $company->save();
         
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Empresa actualixada exitosamente');
     }
+
+    public function destroy($id)
+    {
+        $item = Company::findOrFail($id);
+
+        $item->delete();
+
+        return redirect()->back()->with('success', 'Empresa eliminada exitosamente.');
+    }
+
 }

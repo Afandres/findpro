@@ -46,3 +46,53 @@
 <!-- Sweetaler -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+<script>
+  @if(session('success'))
+      Swal.fire({
+          title: '¡Éxito!',
+          text: '{{ session('success') }}',
+          icon: 'success',
+          confirmButtonText: 'Aceptar'
+      });
+  @endif
+
+  @if(session('error'))
+      Swal.fire({
+          title: 'Error',
+          text: '{{ session('error') }}',
+          icon: 'error',
+          confirmButtonText: 'Intentar de nuevo'
+      });
+  @endif
+
+  @if(session('info'))
+      Swal.fire({
+          title: 'Información',
+          text: '{{ session('info') }}',
+          icon: 'info',
+          confirmButtonText: 'Entendido'
+      });
+  @endif
+</script>
+
+<script>
+  function confirmDelete(event, url) {
+      event.preventDefault();
+      Swal.fire({
+          title: '¿Estás seguro?',
+          text: "¡No podrás revertir esto!",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Sí, eliminar',
+          cancelButtonText: 'Cancelar'
+      }).then((result) => {
+          if (result.isConfirmed) {
+              document.getElementById('delete-form').action = url;
+              document.getElementById('delete-form').submit();
+          }
+      });
+  }
+</script> 
+

@@ -16,5 +16,6 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])
         Route::get('/admin/company/index', 'index')->name('admin.company.index');
         Route::post('/admin/company/store', 'store')->name('admin.company.store');
         Route::post('/admin/company/update', 'update')->name('admin.company.update');
+        Route::delete('/admin/company/destroy/{id}', 'destroy')->name('admin.company.destroy');
     });
 });
