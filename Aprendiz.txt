@@ -1,0 +1,8 @@
+configurar el env.example 
+(se quita para que el env se ponga modo configuracion y se ajusta a la base de datos)
+
+modifique la url y el puerto
+
+se uso en la terminal el comando composer install para instalar las dependencias del proyecto
+
+se uso el comando php artisan key:generate (generar llave de la aplicacion (eso lo pide laravel))
