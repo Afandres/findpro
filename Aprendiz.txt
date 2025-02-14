@@ -1,3 +1,5 @@
+14/02/25
+
 configurar el env.example 
 (se quita para que el env se ponga modo configuracion y se ajusta a la base de datos)
 
@@ -6,3 +8,17 @@ modifique la url y el puerto
 se uso en la terminal el comando composer install para instalar las dependencias del proyecto
 
 se uso el comando php artisan key:generate (generar llave de la aplicacion (eso lo pide laravel))
+
+se uso el comando npm install 
+
+se uso el comando npm run build para istalar complementos necesarios
+
+se uso el comando php artisan make:migration create_sectors_table para crear la tabla de sectors
+
+se uso el comando php artisan make:controller SectorController para crear el controlador
+despues el php artisan make:model Sector para representar la tabla de la base de datos
+
+modificar en el sidebar la ruta de sector para asi poder modificar el index.blade de el sector
+despues cambiar el codigo para agregar, editar y eliminar con las rutas, vista, controlador.
+
+
